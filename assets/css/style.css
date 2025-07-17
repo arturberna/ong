@@ -1,0 +1,13 @@
+ :root {
+        --primary-color: #0f4c5c;
+        --secondary-color: #ffc107;
+        --bs-primary: #0f4c5c;
+        --bs-primary-rgb: 15, 76, 92;
+    }
+    
+    header {
+      background-color: var(--primary-color);
+    }
+     footer {
+      background-color: var(--primary-color);
+    }
