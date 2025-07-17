@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OBC - Quem Somos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    :root {
+      --primary-color: #0f4c5c;
+      --secondary-color: #ffc107;
+      --light-bg: #f8f9fa;
+    }
+    
+    /* Timeline Modernizada */
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 50px;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      width: 3px;
+      background-color: var(--secondary-color);
+      top: 0;
+      bottom: 0;
+      left: 25px;
+      margin-left: -1.5px;
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 50px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+    
+    .timeline-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: -40px;
+      background-color: white;
+      border: 4px solid var(--primary-color);
+      border-radius: 50%;
+      z-index: 1;
+    }
+    
+    .timeline-year {
+      position: absolute;
+      left: -100px;
+      top: 15px;
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 1.2rem;
+      width: 80px;
+      text-align: right;
+    }
+    
+    .timeline-content h3 {
+      color: var(--primary-color);
+      margin-top: 0;
+    }
+    
+    .timeline-content p {
+      margin-bottom: 0;
+    }
+    
+    @media (max-width: 768px) {
+      .timeline {
+        padding-left: 0;
+      }
+      
+      .timeline::before {
+        left: 10px;
+      }
+      
+      .timeline-item {
+        padding: 15px;
+        margin-left: 30px;
+      }
+      
+      .timeline-item::before {
+        left: -25px;
+      }
+      
+      .timeline-year {
+        position: relative;
+        left: 0;
+        text-align: left;
+        margin-bottom: 10px;
+        width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- [Seu cabeçalho existente aqui] -->
+
+<!-- Seção de História com Timeline Aprimorada -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Nossa História</h2>
+    
+    <div class="timeline">
+      <!-- Item 1 -->
+      <div class="timeline-item">
+        <div class="timeline-year">2010</div>
+        <div class="timeline-content">
+          <h3>Fundação da OBC</h3>
+          <p>Primeiros projetos comunitários na região sul de São Paulo com um pequeno grupo de voluntários dedicados.</p>
+          <div class="mt-2">
+            <span class="badge bg-primary">Início</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Item 2 -->
+      <div class="timeline-item">
+        <div class="timeline-year">2014</div>
+        <div class="timeline-content">
+          <h3>Primeira Expansão</h3>
+          <p>Ampliamos nossas atividades para 5 novas comunidades e estabelecemos nossa primeira sede própria.</p>
+          <div class="mt-2">
+            <span class="badge bg-success">Crescimento</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Item 3 -->
+      <div class="timeline-item">
+        <div class="timeline-year">2018</div>
+        <div class="timeline-content">
+          <h3>Reconhecimento Nacional</h3>
+          <p>Premiada como uma das melhores ONGs do Brasil pelo Instituto Doar e Revista Época.</p>
+          <div class="mt-2">
+            <span class="badge bg-warning text-dark">Prêmio</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Item 4 -->
+      <div class="timeline-item">
+        <div class="timeline-year">2020</div>
+        <div class="timeline-content">
+          <h3>Resposta à Pandemia</h3>
+          <p>Distribuímos mais de 10 toneladas de alimentos e 5.000 kits de higiene durante a crise do COVID-19.</p>
+          <div class="mt-2">
+            <span class="badge bg-danger">Emergência</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Item 5 -->
+      <div class="timeline-item">
+        <div class="timeline-year">2023</div>
+        <div class="timeline-content">
+          <h3>Consolidação</h3>
+          <p>Atuando em 15 comunidades com mais de 500 voluntários e 12 projetos sociais ativos.</p>
+          <div class="mt-2">
+            <span class="badge bg-info">Atual</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-5">
+      <button class="btn btn-primary" id="loadMore">Carregar Mais Marcos</button>
+    </div>
+  </div>
+</section>
+
+<!-- [Seu rodapé existente aqui] -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Simulação de carregamento de mais itens
+  document.getElementById('loadMore').addEventListener('click', function() {
+    const timeline = document.querySelector('.timeline');
+    const newItem = document.createElement('div');
+    newItem.className = 'timeline-item';
+    newItem.innerHTML = `
+      <div class="timeline-year">2025</div>
+      <div class="timeline-content">
+        <h3>Novos Projetos</h3>
+        <p>Expansão para novas regiões com programas de educação profissionalizante.</p>
+        <div class="mt-2">
+          <span class="badge bg-secondary">Futuro</span>
+        </div>
+      </div>
+    `;
+    timeline.appendChild(newItem);
+    this.textContent = 'Carregando...';
+    setTimeout(() => {
+      this.style.display = 'none';
+    }, 1000);
+  });
+</script>
+</body>
+</html>

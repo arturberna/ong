@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OBC - Como Ajudar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    :root {
+      --primary-color: #0f4c5c;
+      --secondary-color: #ffc107;
+      --light-bg: #f8f9fa;
+    }
+    
+    /* Estilos consistentes */
+    header {
+      background-color: var(--primary-color);
+    }
+    
+    .hero-section {
+      background: linear-gradient(rgba(15, 76, 92, 0.8), rgba(15, 76, 92, 0.9)), 
+                  url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1169&auto=format&fit=crop') center/cover;
+      color: white;
+      padding: 100px 0;
+    }
+    
+    .btn-yellow {
+      background-color: var(--secondary-color);
+      color: #000;
+      font-weight: 500;
+    }
+    
+    .help-card {
+      transition: all 0.3s ease;
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 100%;
+    }
+    
+    .help-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .help-card .card-icon {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    
+    .donation-progress {
+      height: 10px;
+      border-radius: 5px;
+    }
+    
+    .impact-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+    
+    .testimonial-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+    }
+    
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    /* Estilo para formulário */
+    .form-control:focus {
+      border-color: var(--secondary-color);
+      box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="text-white py-3">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white fs-3 fw-bold" href="#">OBC</a>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Quem Somos</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Projetos</a></li>
+            <li class="nav-item"><a class="nav-link text-white active" href="#">Como Ajudar</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section text-center text-white">
+  <div class="container">
+    <h1 class="display-4 fw-bold mb-4">Como Ajudar</h1>
+    <p class="lead mb-5">Sua contribuição transforma vidas. Conheça todas as formas de fazer parte dessa mudança.</p>
+  </div>
+</section>
+
+<!-- Formas de Ajudar -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Doação Financeira -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card help-card h-100">
+          <div class="card-body text-center p-4">
+            <div class="card-icon">
+              <i class="bi bi-cash-coin"></i>
+            </div>
+            <h3 class="card-title">Doação Financeira</h3>
+            <p class="card-text">Contribua com qualquer valor para manutenção e expansão dos nossos projetos.</p>
+            <div class="mt-4">
+              <div class="d-flex justify-content-between mb-2">
+                <small>Meta mensal</small>
+                <small>75% alcançado</small>
+              </div>
+              <div class="progress donation-progress">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 75%"></div>
+              </div>
+            </div>
+            <a href="#doar" class="btn btn-yellow mt-3">Doar Agora</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Voluntariado -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card help-card h-100">
+          <div class="card-body text-center p-4">
+            <div class="card-icon">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <h3 class="card-title">Voluntariado</h3>
+            <p class="card-text">Doe seu tempo e talento para causas que transformam realidades.</p>
+            <ul class="text-start mt-3 mb-4">
+              <li>Atuação em projetos</li>
+              <li>Suporte administrativo</li>
+              <li>Habilidades específicas</li>
+            </ul>
+            <a href="#voluntario" class="btn btn-outline-primary">Quero ser voluntário</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Doação de Materiais -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card help-card h-100">
+          <div class="card-body text-center p-4">
+            <div class="card-icon">
+              <i class="bi bi-box-seam"></i>
+            </div>
+            <h3 class="card-title">Doação de Materiais</h3>
+            <p class="card-text">Aceitamos diversos tipos de doações para nossos projetos e famílias atendidas.</p>
+            <div class="mt-4">
+              <div class="alert alert-info">
+                <i class="bi bi-info-circle"></i> Consulte nossa lista de necessidades
+              </div>
+            </div>
+            <a href="#materiais" class="btn btn-outline-primary">Ver lista completa</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Divulgação -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card help-card h-100">
+          <div class="card-body text-center p-4">
+            <div class="card-icon">
+              <i class="bi bi-share"></i>
+            </div>
+            <h3 class="card-title">Divulgação</h3>
+            <p class="card-text">Compartilhe nosso trabalho e ajude a alcançar mais pessoas.</p>
+            <div class="mt-4 social-share">
+              <a href="#" class="btn btn-outline-primary me-2"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="btn btn-outline-primary me-2"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="btn btn-outline-primary me-2"><i class="bi bi-whatsapp"></i></a>
+              <a href="#" class="btn btn-outline-primary"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Parcerias -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card help-card h-100">
+          <div class="card-body text-center p-4">
+            <div class="card-icon">
+              <i class="bi bi-handshake"></i>
+            </div>
+            <h3 class="card-title">Parcerias</h3>
+            <p class="card-text">Empresas e instituições podem apoiar de diversas formas.</p>
+            <div class="mt-4">
+              <ul class="text-start">
+                <li>Patrocínio de projetos</li>
+                <li>Doação de serviços</li>
+                <li>Voluntariado corporativo</li>
+              </ul>
+            </div>
+            <a href="#parcerias" class="btn btn-outline-primary">Seja nosso parceiro</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Outras Formas -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card help-card h-100">
+          <div class="card-body text-center p-4">
+            <div class="card-icon">
+              <i class="bi bi-lightbulb"></i>
+            </div>
+            <h3 class="card-title">Outras Formas</h3>
+            <p class="card-text">Sua criatividade pode gerar novas formas de contribuição.</p>
+            <div class="mt-4">
+              <p>Organize eventos, campanhas ou mobilize sua rede.</p>
+            </div>
+            <a href="#contato" class="btn btn-outline-primary">Fale conosco</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seção de Impacto -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-5">Seu Impacto</h2>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="impact-number">10.000+</div>
+        <p>Vidas transformadas</p>
+      </div>
+      <div class="col-md-3">
+        <div class="impact-number">500+</div>
+        <p>Voluntários ativos</p>
+      </div>
+      <div class="col-md-3">
+        <div class="impact-number">15</div>
+        <p>Comunidades atendidas</p>
+      </div>
+      <div class="col-md-3">
+        <div class="impact-number">12</div>
+        <p>Projetos em andamento</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seção de Depoimentos -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Quem já ajudou diz</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <img src="https://randomuser.me/api/portraits/women/43.jpg" 
+                   alt="Ana Santos" 
+                   class="rounded-circle testimonial-img me-3">
+              <div>
+                <h5 class="mb-0">Ana Santos</h5>
+                <small class="text-muted">Doadora desde 2018</small>
+              </div>
+            </div>
+            <p class="card-text">"Doar para a OBC me traz a certeza de que meu dinheiro está sendo bem utilizado. Recebo relatórios transparentes e vejo o impacto real."</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" 
+                   alt="Carlos Oliveira" 
+                   class="rounded-circle testimonial-img me-3">
+              <div>
+                <h5 class="mb-0">Carlos Oliveira</h5>
+                <small class="text-muted">Voluntário</small>
+              </div>
+            </div>
+            <p class="card-text">"Ser voluntário mudou minha perspectiva de vida. A OBC me deu a oportunidade de colocar minhas habilidades em prol de quem realmente precisa."</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <img src="https://randomuser.me/api/portraits/women/65.jpg" 
+                   alt="Mariana Costa" 
+                   class="rounded-circle testimonial-img me-3">
+              <div>
+                <h5 class="mb-0">Mariana Costa</h5>
+                <small class="text-muted">Parceira empresarial</small>
+              </div>
+            </div>
+            <p class="card-text">"Nossa empresa encontrou na OBC um parceiro sério para nossos programas de responsabilidade social. Os resultados são mensuráveis e inspiradores."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Formulário de Doação -->
+<section class="py-5 bg-light" id="doar">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card border-0 shadow">
+          <div class="card-body p-5">
+            <h2 class="text-center mb-4">Faça sua doação</h2>
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nome" class="form-label">Nome completo</label>
+                  <input type="text" class="form-control" id="nome" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">E-mail</label>
+                  <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="valor" class="form-label">Valor (R$)</label>
+                  <input type="number" class="form-control" id="valor" min="10" value="50" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="tipo" class="form-label">Tipo de doação</label>
+                  <select class="form-select" id="tipo">
+                    <option>Única</option>
+                    <option>Mensal</option>
+                    <option>Trimestral</option>
+                    <option>Anual</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="mensagem" class="form-label">Mensagem (opcional)</label>
+                  <textarea class="form-control" id="mensagem" rows="3"></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="newsletter">
+                    <label class="form-check-label" for="newsletter">
+                      Desejo receber informações sobre o impacto da minha doação
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 text-center mt-4">
+                  <button type="submit" class="btn btn-yellow btn-lg px-5">Doar Agora</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <h3 class="mb-3">OBC</h3>
+        <p>Transformando vidas com solidariedade desde 2010.</p>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <h4 class="mb-3">Contato</h4>
+        <p><i class="bi bi-envelope me-2"></i> contato@obc.org.br</p>
+        <p><i class="bi bi-telephone me-2"></i> (11) 9999-9999</p>
+        <p><i class="bi bi-geo-alt me-2"></i> São Paulo - SP</p>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <h4 class="mb-3">Redes Sociais</h4>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="text-center">
+      <p class="mb-0">&copy; 2023 OBC - Todos os direitos reservados</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OBC - Contato</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    :root {
+      --primary-color: #0f4c5c;
+      --secondary-color: #ffc107;
+      --light-bg: #f8f9fa;
+    }
+    
+    /* Estilos consistentes */
+    header {
+      background-color: var(--primary-color);
+    }
+    
+    .hero-contact {
+      background: linear-gradient(rgba(15, 76, 92, 0.8), rgba(15, 76, 92, 0.9)), 
+                  url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1169&auto=format&fit=crop') center/cover;
+      color: white;
+      padding: 100px 0;
+    }
+    
+    .btn-yellow {
+      background-color: var(--secondary-color);
+      color: #000;
+      font-weight: 500;
+    }
+    
+    .contact-card {
+      transition: all 0.3s ease;
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 100%;
+    }
+    
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .contact-icon {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    
+    .form-control:focus {
+      border-color: var(--secondary-color);
+      box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+    }
+    
+    .map-container {
+      height: 400px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="text-white py-3">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white fs-3 fw-bold" href="#">OBC</a>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Quem Somos</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Projetos</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Como Ajudar</a></li>
+            <li class="nav-item"><a class="nav-link text-white active" href="#">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-contact text-center text-white">
+  <div class="container">
+    <h1 class="display-4 fw-bold mb-4">Fale Conosco</h1>
+    <p class="lead mb-5">Estamos aqui para responder suas dúvidas e ouvir suas sugestões.</p>
+  </div>
+</section>
+
+<!-- Formas de Contato -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Endereço -->
+      <div class="col-md-4">
+        <div class="card contact-card h-100">
+          <div class="card-body text-center p-4">
+            <div class="contact-icon">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <h3 class="card-title">Endereço</h3>
+            <p class="card-text">
+              Rua das Organizações, 123<br>
+              Bairro Social<br>
+              São Paulo - SP<br>
+              CEP: 01234-567
+            </p>
+            <a href="#mapa" class="btn btn-outline-primary">Ver no mapa</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Telefone/Email -->
+      <div class="col-md-4">
+        <div class="card contact-card h-100">
+          <div class="card-body text-center p-4">
+            <div class="contact-icon">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+            <h3 class="card-title">Contato</h3>
+            <p class="card-text">
+              <strong>Telefone:</strong> (11) 9999-9999<br>
+              <strong>WhatsApp:</strong> (11) 98888-7777<br>
+              <strong>E-mail:</strong> contato@obc.org.br
+            </p>
+            <a href="https://wa.me/5511988887777" class="btn btn-outline-success">
+              <i class="bi bi-whatsapp"></i> Chamar no WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Horário -->
+      <div class="col-md-4">
+        <div class="card contact-card h-100">
+          <div class="card-body text-center p-4">
+            <div class="contact-icon">
+              <i class="bi bi-clock-fill"></i>
+            </div>
+            <h3 class="card-title">Horário de Funcionamento</h3>
+            <p class="card-text">
+              <strong>Segunda a Sexta:</strong> 9h às 18h<br>
+              <strong>Sábado:</strong> 9h às 13h<br>
+              <strong>Domingo:</strong> Fechado
+            </p>
+            <div class="alert alert-info mt-3">
+              <i class="bi bi-info-circle"></i> Visitas somente com agendamento
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Formulário de Contato -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card border-0 shadow">
+          <div class="card-body p-5">
+            <h2 class="text-center mb-4">Envie uma Mensagem</h2>
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nome" class="form-label">Nome completo</label>
+                  <input type="text" class="form-control" id="nome" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">E-mail</label>
+                  <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="col-12">
+                  <label for="assunto" class="form-label">Assunto</label>
+                  <select class="form-select" id="assunto">
+                    <option value="">Selecione...</option>
+                    <option>Dúvida</option>
+                    <option>Sugestão</option>
+                    <option>Doação</option>
+                    <option>Voluntariado</option>
+                    <option>Parceria</option>
+                    <option>Outro</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="mensagem" class="form-label">Mensagem</label>
+                  <textarea class="form-control" id="mensagem" rows="5" required></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="newsletter">
+                    <label class="form-check-label" for="newsletter">
+                      Desejo receber a newsletter da OBC
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 text-center mt-4">
+                  <button type="submit" class="btn btn-yellow btn-lg px-5">Enviar Mensagem</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mapa -->
+<section class="py-5" id="mapa">
+  <div class="container">
+    <h2 class="text-center mb-5">Onde Estamos</h2>
+    <div class="map-container shadow">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452926!2d-46.6534269246831!3d-23.56573436179835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1683134156786!5m2!1spt-BR!2sbr" 
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Perguntas Frequentes -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Perguntas Frequentes</h2>
+    <div class="accordion" id="faqAccordion">
+      <!-- Item 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+            Como posso me tornar um voluntário?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Você pode se cadastrar como voluntário através do nosso site na página "Como Ajudar" ou enviando uma mensagem pelo formulário de contato informando sua área de interesse e disponibilidade.
+          </div>
+        </div>
+      </div>
+      
+      <!-- Item 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+            Quais são as formas de doação disponíveis?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Aceitamos doações financeiras (PIX, transferência bancária, cartão de crédito), doações de materiais (consulte nossa lista de necessidades) e doações de serviços. Todas as informações estão disponíveis na página "Como Ajudar".
+          </div>
+        </div>
+      </div>
+      
+      <!-- Item 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+            Como posso agendar uma visita à sede da OBC?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            As visitas devem ser agendadas com pelo menos 48 horas de antecedência através do nosso telefone (11) 9999-9999 ou pelo e-mail visitas@obc.org.br.
+          </div>
+        </div>
+      </div>
+      
+      <!-- Item 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+            A OBC emite recibo para doações?
+          </button>
+        </h2>
+        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Sim, emitimos recibo para todas as doações financeiras que podem ser utilizadas para dedução no Imposto de Renda (de acordo com a legislação vigente). O recibo é enviado automaticamente por e-mail após a confirmação da doação.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <h3 class="mb-3">OBC</h3>
+        <p>Transformando vidas com solidariedade desde 2010.</p>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <h4 class="mb-3">Contato</h4>
+        <p><i class="bi bi-envelope me-2"></i> contato@obc.org.br</p>
+        <p><i class="bi bi-telephone me-2"></i> (11) 9999-9999</p>
+        <p><i class="bi bi-geo-alt me-2"></i> São Paulo - SP</p>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <h4 class="mb-3">Redes Sociais</h4>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="text-center">
+      <p class="mb-0">&copy; 2023 OBC - Todos os direitos reservados</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OBC - Nossos Projetos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    :root {
+      --primary-color: #0f4c5c;
+      --secondary-color: #ffc107;
+      --light-bg: #f8f9fa;
+    }
+    
+    /* Estilos consistentes com o restante do site */
+    header {
+      background-color: var(--primary-color);
+    }
+    
+    .hero-projetos {
+      background: linear-gradient(rgba(15, 76, 92, 0.8), rgba(15, 76, 92, 0.9)), 
+                  url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1169&auto=format&fit=crop') center/cover;
+      color: white;
+      padding: 100px 0;
+    }
+    
+    .btn-yellow {
+      background-color: var(--secondary-color);
+      color: #000;
+      font-weight: 500;
+    }
+    
+    .card-projeto {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .card-projeto:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .badge-categoria {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 0.8rem;
+      padding: 5px 10px;
+    }
+    
+    .filtros .nav-link {
+      color: var(--primary-color);
+      font-weight: 500;
+    }
+    
+    .filtros .nav-link.active {
+      color: var(--secondary-color);
+      border-bottom: 2px solid var(--secondary-color);
+    }
+    
+    .stats-card {
+      border-left: 4px solid var(--secondary-color);
+      padding-left: 20px;
+    }
+    
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="text-white py-3">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white fs-3 fw-bold" href="#">OBC</a>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Quem Somos</a></li>
+            <li class="nav-item"><a class="nav-link text-white active" href="#">Projetos</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Como Ajudar</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Projetos -->
+<section class="hero-projetos text-center text-white">
+  <div class="container">
+    <h1 class="display-4 fw-bold mb-4">Nossos Projetos</h1>
+    <p class="lead mb-5">Conheça nossas iniciativas que transformam vidas e comunidades</p>
+    <a href="#projetos" class="btn btn-light btn-lg me-3">Ver Projetos</a>
+    <a href="#" class="btn btn-yellow btn-lg">Apoie um Projeto</a>
+  </div>
+</section>
+
+<!-- Destaques -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="stats-card">
+          <h2 class="display-5 fw-bold">12</h2>
+          <p class="fs-5">Projetos Ativos</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stats-card">
+          <h2 class="display-5 fw-bold">15</h2>
+          <p class="fs-5">Comunidades Atendidas</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stats-card">
+          <h2 class="display-5 fw-bold">10K+</h2>
+          <p class="fs-5">Pessoas Impactadas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Filtros -->
+<section class="py-4">
+  <div class="container">
+    <ul class="nav filtros justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" href="#" data-filter="todos">Todos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-filter="educacao">Educação</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-filter="saude">Saúde</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-filter="renda">Geração de Renda</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-filter="infra">Infraestrutura</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Lista de Projetos -->
+<section class="py-5" id="projetos">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Projeto 1 -->
+      <div class="col-lg-4 col-md-6" data-category="educacao">
+        <div class="card card-projeto">
+          <span class="badge bg-primary badge-categoria">Educação</span>
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1171&auto=format&fit=crop" class="card-img-top" alt="Crianças estudando">
+          <div class="card-body">
+            <h3 class="card-title">Educação Transformadora</h3>
+            <p class="card-text">Programas de reforço escolar e capacitação profissional para jovens e adultos em comunidades carentes.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="text-muted"><i class="bi bi-people-fill"></i> 500 beneficiados</span>
+              <a href="#" class="btn btn-sm btn-outline-primary">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Projeto 2 -->
+      <div class="col-lg-4 col-md-6" data-category="saude">
+        <div class="card card-projeto">
+          <span class="badge bg-success badge-categoria">Saúde</span>
+          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1170&auto=format&fit=crop" class="card-img-top" alt="Atendimento médico">
+          <div class="card-body">
+            <h3 class="card-title">Saúde Comunitária</h3>
+            <p class="card-text">Atendimento médico básico e programas de prevenção de doenças em áreas de vulnerabilidade social.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="text-muted"><i class="bi bi-people-fill"></i> 1.200 beneficiados</span>
+              <a href="#" class="btn btn-sm btn-outline-primary">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Projeto 3 -->
+      <div class="col-lg-4 col-md-6" data-category="renda">
+        <div class="card card-projeto">
+          <span class="badge bg-warning text-dark badge-categoria">Geração de Renda</span>
+          <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1171&auto=format&fit=crop" class="card-img-top" alt="Oficina de artesanato">
+          <div class="card-body">
+            <h3 class="card-title">Mãos que Transformam</h3>
+            <p class="card-text">Oficinas profissionalizantes e microcrédito para empreendedores locais desenvolverem seus negócios.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="text-muted"><i class="bi bi-people-fill"></i> 300 beneficiados</span>
+              <a href="#" class="btn btn-sm btn-outline-primary">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Projeto 4 -->
+      <div class="col-lg-4 col-md-6" data-category="infra">
+        <div class="card card-projeto">
+          <span class="badge bg-info badge-categoria">Infraestrutura</span>
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1170&auto=format&fit=crop" class="card-img-top" alt="Reforma de casas">
+          <div class="card-body">
+            <h3 class="card-title">Moradia Digna</h3>
+            <p class="card-text">Reforma e construção de moradias para famílias em situação de vulnerabilidade habitacional.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="text-muted"><i class="bi bi-people-fill"></i> 150 famílias</span>
+              <a href="#" class="btn btn-sm btn-outline-primary">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Projeto 5 -->
+      <div class="col-lg-4 col-md-6" data-category="educacao">
+        <div class="card card-projeto">
+          <span class="badge bg-primary badge-categoria">Educação</span>
+          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1170&auto=format&fit=crop" class="card-img-top" alt="Biblioteca comunitária">
+          <div class="card-body">
+            <h3 class="card-title">Biblioteca Comunitária</h3>
+            <p class="card-text">Espaços de leitura e incentivo à educação em comunidades com baixo acesso à cultura.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="text-muted"><i class="bi bi-people-fill"></i> 800 beneficiados</span>
+              <a href="#" class="btn btn-sm btn-outline-primary">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Projeto 6 -->
+      <div class="col-lg-4 col-md-6" data-category="saude">
+        <div class="card card-projeto">
+          <span class="badge bg-success badge-categoria">Saúde</span>
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1170&auto=format&fit=crop" class="card-img-top" alt="Alimentação saudável">
+          <div class="card-body">
+            <h3 class="card-title">Alimentação Saudável</h3>
+            <p class="card-text">Oficinas de nutrição e hortas comunitárias para promover segurança alimentar.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="text-muted"><i class="bi bi-people-fill"></i> 600 beneficiados</span>
+              <a href="#" class="btn btn-sm btn-outline-primary">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-5">
+      <button class="btn btn-primary" id="loadMoreProjects">Carregar Mais Projetos</button>
+    </div>
+  </div>
+</section>
+
+<!-- Como Ajudar -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4">Como Você Pode Ajudar</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <i class="bi bi-cash-coin fs-1 text-primary mb-3"></i>
+          <h3>Doações</h3>
+          <p>Contribua financeiramente para manutenção e expansão dos projetos.</p>
+          <a href="#" class="btn btn-outline-primary">Doar Agora</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <i class="bi bi-people-fill fs-1 text-primary mb-3"></i>
+          <h3>Voluntariado</h3>
+          <p>Doe seu tempo e talento para transformar vidas.</p>
+          <a href="#" class="btn btn-outline-primary">Seja Voluntário</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <i class="bi bi-share fs-1 text-primary mb-3"></i>
+          <h3>Divulgação</h3>
+          <p>Compartilhe nossos projetos em suas redes sociais.</p>
+          <a href="#" class="btn btn-outline-primary">Compartilhar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <h3 class="mb-3">OBC</h3>
+        <p>Transformando vidas com solidariedade desde 2010.</p>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <h4 class="mb-3">Contato</h4>
+        <p><i class="bi bi-envelope me-2"></i> contato@obc.org.br</p>
+        <p><i class="bi bi-telephone me-2"></i> (11) 9999-9999</p>
+        <p><i class="bi bi-geo-alt me-2"></i> São Paulo - SP</p>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <h4 class="mb-3">Redes Sociais</h4>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="text-center">
+      <p class="mb-0">&copy; 2023 OBC - Todos os direitos reservados</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Filtro de projetos
+  document.querySelectorAll('.filtros .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Ativa o link clicado
+      document.querySelectorAll('.filtros .nav-link').forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+      
+      const filter = this.getAttribute('data-filter');
+      
+      // Filtra os projetos
+      document.querySelectorAll('[data-category]').forEach(project => {
+        if(filter === 'todos' || project.getAttribute('data-category') === filter) {
+          project.style.display = 'block';
+        } else {
+          project.style.display = 'none';
+        }
+      });
+    });
+  });
+  
+  // Simulação de carregar mais projetos
+  document.getElementById('loadMoreProjects').addEventListener('click', function() {
+    // Simular carregamento
+    this.textContent = 'Carregando...';
+    this.disabled = true;
+    
+    // Simular requisição AJAX
+    setTimeout(() => {
+      // Adicionar novos projetos (simulação)
+      const projectsContainer = document.querySelector('#projetos .row');
+      const newProject = document.createElement('div');
+      newProject.className = 'col-lg-4 col-md-6';
+      newProject.setAttribute('data-category', 'educacao');
+      newProject.innerHTML = `
+        <div class="card card-projeto">
+          <span class="badge bg-primary badge-categoria">Educação</span>
+          <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=1171&auto=format&fit=crop" class="card-img-top" alt="Aula de informática">
+          <div class="card-body">
+            <h3 class="card-title">Inclusão Digital</h3>
+            <p class="card-text">Cursos de informática básica para crianças e adultos em comunidades carentes.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="text-muted"><i class="bi bi-people-fill"></i> 350 beneficiados</span>
+              <a href="#" class="btn btn-sm btn-outline-primary">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+      `;
+      projectsContainer.appendChild(newProject);
+      
+      this.style.display = 'none';
+    }, 1500);
+  });
+</script>
+</body>
+</html>
